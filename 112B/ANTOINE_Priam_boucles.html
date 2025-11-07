@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANTOINE boucles JS</title>
+
+    <link rel="stylesheet" href="ANTOINE_Priam_style.css">
+</head>
+<body>
+    <h1>A table !</h1>
+    <table>
+        <tr><td>Cellule 1</td><td>Cellule 2</td></tr>
+        <tr><td>Cellule 3</td><td>Cellule 4</td></tr>
+    </table>
+    <h1>Table en bois de Javascript</h1>
+    <script language="JavaScript">
+function multiplication(ligne) {
+let resultat = ""
+let texte = ""
+for (y=1; y < 11; y++) {
+if (ligne == 0) {
+// ligne 0 : on affiche le titre
+resultat = resultat + '<td><strong>'
+resultat = resultat + "Table de " + y + '</strong></td>'
+} else {
+// autres lignes : on affiche le calcul
+texte = y + " x " + ligne + " = " + ligne*y
+resultat = resultat + '<td>' + texte + '</td>'
+}
+}
+return resultat
+}
+
+document.write("<h1>Table de multiplication</h1>")
+tableau='<table>'
+for (t=0; t < 13; t++) {
+tableau = tableau + '<tr>' + multiplication(t) + '</tr>'
+}
+tableau = tableau + '</table>'
+document.write(tableau)
+    </script>
+
+</body>
+</html>
