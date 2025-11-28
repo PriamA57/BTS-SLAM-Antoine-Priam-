@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mastermind - Trouver les chiffres dans l'ordre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mastermind.css">
+</head>
+<body>
+  <div id="page">
+    <header>
+      <h1>Mastermind - Trouver les 4 chiffres dans l'ordre</h1>
+      <p class="intro">
+        L’application choisi une combinaison secrète de <strong>4 chiffres différents</strong> entre 0 et 9.<br>
+        Vous avez <strong>10 essais</strong> pour trouver la bonne combinaison dans le bon ordre.
+      </p>
+    </header>
+
+    <main>
+      <section id="zoneJeu">
+        <h2>Votre proposition</h2>
+
+        <div id="zoneProposition">
+          <label for="champProposition">
+            Entrez 4 chiffres (ex : 1234) :
+          </label>
+          <input type="text" id="champProposition" maxlength="4">
+          <button id="btnProposer">Proposer</button>
+        </div>
+
+        <div id="zoneInfo">
+          <p id="message"></p>
+          <p>
+            Essai n° <span id="essaiCourant">0</span> / <span id="essaiMax">10</span>
+          </p>
+        </div>
+
+        <h2>Historique des essais</h2>
+        <div id="zoneHistorique">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Proposition</th>
+                <th>Bien placés</th>
+                <th>Présents mal placés</th>
+              </tr>
+            </thead>
+            <tbody id="historique">
+              <!-- Les lignes seront ajoutées ici par JavaScript -->
+            </tbody>
+          </table>
+        </div>
+
+        <div id="zoneControle">
+          <button id="btnNouvellePartie">Nouvelle partie</button>
+        </div>
+      </section>
+
+      <section id="zoneAide">
+        <h2>Aide</h2>
+        <p>
+          Pensez à ouvrir la console JavaScript
+          (<code>Ctrl + Shift + I</code>) pour voir les messages de la console.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Mastermind - le jeu JS que j'aime.</p>
+    </footer>
+  </div>
+
+  <script src="mastermind.js"></script>
+</body>
+</html>
